@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Editor.md</title>
+    <link rel="stylesheet" href="editormd.min.css" />
+</head>
+<body>
+<div id="editormd">
+    <label>
+        <textarea style="display:none;">
+        </textarea>
+    </label>
+</div>
+<script src="jquery.min.js"></script>
+<script src="editormd.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var testEditor;
+        $.get('test.md', function(md){
+            testEditor = editormd("editormd", {
+                width: "90%",
+                height: 740,
+                path : './lib/',
+                markdown : md,
+                codeFold : true,
+                saveHTMLToTextarea : true,
+                searchReplace : true,
+                htmlDecode : "style,script,iframe|on*",
+                emoji : true,
+                taskList : true,
+                tocm : true,
+                tex : true,
+                flowChart : true,
+                sequenceDiagram : true,
+                imageUpload : true,
+                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "./php/upload.php",
+                onload : function() {
+                }
+        })});
+    });
+</script>
+</body>
+</html>

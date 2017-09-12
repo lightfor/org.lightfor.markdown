@@ -8,10 +8,6 @@
     <artifactId>markdown</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <properties>
-        <flexmark.version>0.18.0</flexmark.version>
-    </properties>
-
     <modules>
         <module>editor-md</module>
         <module>marked</module>
@@ -19,13 +15,6 @@
         <module>flexmark</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.vladsch.flexmark</groupId>
-            <artifactId>flexmark-all</artifactId>
-            <version>${flexmark.version}</version>
-        </dependency>
-    </dependencies>
 
 
     <build>

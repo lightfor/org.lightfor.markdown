@@ -12,10 +12,17 @@
 
     <artifactId>flexmark</artifactId>
 
+
+    <properties>
+        <flexmark.version>0.18.0</flexmark.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-all</artifactId>
+            <version>${flexmark.version}</version>
         </dependency>
     </dependencies>
+
 </project>
